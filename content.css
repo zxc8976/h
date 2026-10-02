@@ -1,0 +1,136 @@
+#crdcs-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+  width: 268px;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 14px;
+  background: rgba(24,24,28,.92);
+  color: #fff;
+  font-family: Arial, "Noto Sans TC", "Noto Sans", sans-serif;
+  font-size: 13px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+  backdrop-filter: blur(12px);
+  user-select: none;
+  transition: width .16s ease, padding .16s ease, border-radius .16s ease;
+}
+
+#crdcs-panel * { box-sizing: border-box; }
+
+.crdcs-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 28px;
+  margin-bottom: 8px;
+  min-height: 24px;
+}
+
+.crdcs-value {
+  font-variant-numeric: tabular-nums;
+  opacity: .9;
+}
+
+.crdcs-slider {
+  width: 100%;
+  margin: 4px 0 10px;
+}
+
+.crdcs-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.crdcs-tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 7px;
+}
+
+.crdcs-btn {
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 8px;
+  padding: 7px 6px;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.crdcs-btn:hover {
+  background: rgba(255,255,255,.16);
+}
+
+.crdcs-hint {
+  margin-top: 9px;
+  padding: 8px 9px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.06);
+  font-size: 11px;
+  line-height: 1.5;
+  opacity: .82;
+}
+
+.crdcs-status {
+  min-height: 16px;
+  margin-top: 7px;
+  opacity: .68;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.crdcs-minimize {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* Minimized pill */
+#crdcs-panel.crdcs-minimized {
+  width: 118px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+#crdcs-panel.crdcs-minimized .crdcs-top {
+  margin: 0;
+  padding-right: 24px;
+  min-height: 22px;
+  cursor: pointer;
+}
+
+#crdcs-panel.crdcs-minimized .crdcs-top strong {
+  font-size: 12px;
+}
+
+#crdcs-panel.crdcs-minimized .crdcs-value {
+  font-size: 12px;
+}
+
+#crdcs-panel.crdcs-minimized .crdcs-slider,
+#crdcs-panel.crdcs-minimized .crdcs-row,
+#crdcs-panel.crdcs-minimized .crdcs-tools,
+#crdcs-panel.crdcs-minimized .crdcs-hint,
+#crdcs-panel.crdcs-minimized .crdcs-status {
+  display: none;
+}
+
+#crdcs-panel.crdcs-minimized .crdcs-minimize {
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+}
