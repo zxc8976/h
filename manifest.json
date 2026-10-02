@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "CRD Lens",
+  "version": "0.2.0",
+  "description": "為 Chrome Remote Desktop 提供自訂縮放與本地畫面平移，不修改遠端電腦解析度。",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://remotedesktop.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://remotedesktop.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
